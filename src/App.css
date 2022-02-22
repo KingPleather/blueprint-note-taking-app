@@ -44,6 +44,10 @@
 }
 
 .second-add-note {
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+  align-items: center;
   cursor: context-menu;
   user-select: none;
   text-decoration: none;
@@ -86,7 +90,7 @@
   display: inline-flex;
 }
 .note-nav-content {
-  flex-direction: column;
+  text-align: left;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -117,14 +121,14 @@
   color: #373530;
 }
 .second-note-box-selected {
+  align-items: flex-start;
+
   height: 80px;
   width: 229px;
   left: 15px;
   top: 110px;
-  display: flex;
-  flex-direction: column;
-  background: #e8e7e4;
   border-radius: 5px;
+  background: #e8e7e4;
 }
 .second-note-box {
   align-items: flex-start;
@@ -208,6 +212,7 @@
   color: black;
 }
 .note-nav-title {
+  text-align: left;
   margin-left: 26px;
   margin-right: 26px;
   text-overflow: ellipsis;

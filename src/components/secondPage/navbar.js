@@ -19,10 +19,12 @@ const NoteNav = () => {
         }
         const newNoteList = notes.map(note=>{
 
-            if(note.id===id)
+            if(note.id===id && note.selected === false)
 
                 return {...note ,selected:!note.selected}
-            
+            if(note.id===id && note.selected === true) 
+                return {...note,selected:note.selected}
+
             if (note.id!==id && note.selected === true)
                 return {...note,selected:!note.selected}
                 
