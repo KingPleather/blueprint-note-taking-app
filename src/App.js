@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route, Switch} from 'react-router-dom';
+import AddNote from './components/newNote.js'
+import FirstPage from './components/noteDisplay/firstPage.js'
+import NoteDisplay from './components/noteDisplay/noteDisplay.js'
+import SecondPage from './components/secondPage/secondContainer.js'
+import { NoteProvider } from './noteContext';
+const App = () => {
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NoteProvider>
+        <div className="App">
+          
+          
+          
+          <Router>
+            <div>
+
+              
+              <Routes>
+
+                <Route path='/notes/:id' element={<SecondPage/>}/>
+                <Route path='/' element={<FirstPage/>}/>
+
+              </Routes>
+              
+            </div>
+
+          </Router>
+          
+          
+        </div> 
+    </NoteProvider>
+
+        
+
+
   );
 }
+
 
 export default App;
