@@ -9,14 +9,7 @@ const NoteNav = () => {
     const [notes, setNotes]=useContext(NoteContext)
 
     const HandleNoteClick =(id) => {
-        for (let note of notes) {
-            if(note.id===id)
 
-                if (note.title === 'nevergonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyou') {
-                    window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley')
-                
-                }
-        }
         const newNoteList = notes.map(note=>{
 
             if(note.id===id && note.selected === false)
