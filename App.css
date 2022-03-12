@@ -1,0 +1,262 @@
+.App {
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.app-title {
+  height: 51px;
+  width: 191px;
+  left: 334px;
+  top: 148px;
+  border-radius: nullpx;
+
+  position: absolute;
+  left: 28%;
+  right: 65.28%;
+  top: 12%;
+  bottom: 79.74%;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 51px;
+  /* identical to box height */
+
+  color: #373530;
+}
+.link-style {
+  text-decoration: none;
+}
+
+.nav-content {
+  width: 259px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+  padding: 8px;
+  background: #f7f6f3;
+  height: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.second-add-note {
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+  align-items: center;
+  cursor: context-menu;
+  user-select: none;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  align-self: flex-start;
+  margin-left: 1%;
+  /* identical to box height */
+
+  color: #878683;
+}
+.add-note {
+  cursor: context-menu;
+  user-select: none;
+
+  text-decoration: none;
+  margin-left: 40%;
+  margin-top: 8.5%;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #878683;
+}
+.note-container {
+  height: 100%;
+  width: 50%;
+  margin-left: 28%;
+  margin-top: 3%;
+  margin-bottom: 16%;
+  margin-right: 25%;
+  flex-wrap: wrap;
+  gap: 40px;
+  display: inline-flex;
+}
+.note-nav-content {
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 26px;
+  margin-right: 26px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+
+  color: #373530;
+}
+.note-content {
+  flex-direction: column;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 26px;
+  margin-right: 26px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #373530;
+}
+.second-note-box-selected {
+  align-items: flex-start;
+
+  height: 80px;
+  width: 229px;
+  left: 15px;
+  top: 110px;
+  border-radius: 5px;
+  background: #e8e7e4;
+}
+.second-note-box {
+  align-items: flex-start;
+
+  height: 80px;
+  width: 229px;
+  left: 15px;
+  top: 110px;
+  border-radius: 5px;
+}
+.second-note-box:hover {
+  align-items: flex-start;
+
+  height: 80px;
+  width: 229px;
+  left: 15px;
+  top: 110px;
+  border-radius: 5px;
+  background: #e8e7e4;
+}
+
+.nav-div {
+}
+.delete-icon {
+  align-self: flex-end;
+  margin-bottom: 2.7%;
+  margin-right: 3%;
+  margin-top: 3%;
+}
+.note-box {
+  height: 181px;
+  width: 181px;
+  border-radius: 20px;
+
+  background: #ffffff;
+  box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.09);
+  border-radius: 20px;
+}
+.second-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start, stretch;
+}
+
+.note-edit-title {
+  margin-top: 3.27%;
+  margin-left: 6.9%;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 51px;
+  /* identical to box height */
+
+  color: #373530;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+.note-edit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 44px;
+  line-height: 51px;
+  color: black;
+}
+.note-nav-title {
+  text-align: left;
+  margin-left: 26px;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+
+  color: #373530;
+}
+.note-title {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #373530;
+}
+.note-edit {
+  margin-left: 7%;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #373530;
+
+  height: 200px;
+  resize: none;
+  background-color: ;
+}
+.first-page {
+}
