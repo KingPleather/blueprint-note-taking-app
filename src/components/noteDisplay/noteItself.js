@@ -15,7 +15,7 @@ const Note = ({items}) => {
                 newNotes.push({...note, selected:true})
             } else {
 
-                newNotes.push(note)
+                newNotes.push({...note, selected:false})
             }
         }
         setNotes(newNotes);
