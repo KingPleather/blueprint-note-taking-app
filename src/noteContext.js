@@ -1,30 +1,24 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export const NoteContext = createContext();
 
+    function getInitialState() {
+        const notes = localStorage.getItem('notes')
+        return notes ? JSON.parse(notes) : []
+    }
+  
 export const NoteProvider = props => {
-    const [notes, setNotes] = useState([
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-            {id:uuidv4(), message:'asdfffffffffffffffffffffffffffffffffffffff',title:'e', selected:false},
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-    
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-        
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-    
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-    
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false},
-            {id:uuidv4(), message:'asdfasdfffffffffffffffffffffffffffffffffffffff',title:'New Note', selected:false}
-    
-    ])
-    localStorage.setItem('notes',notes);
+    const [notes, setNotes] = useState(getInitialState)
+    useEffect(() => {
+      console.log("bruih");
+      localStorage.setItem('notes', JSON.stringify(notes))
+    }, [notes])
     return (
         <NoteContext.Provider value={[notes, setNotes]}>
             {props.children}
         </NoteContext.Provider>
     )
-
 }
+
+
