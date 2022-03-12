@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import { Route, BrowserRouter as Router, Link, Switch, useNavigate, Navigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import {NoteContext} from '../noteContext';
+import addicon from '../addicon.png';
 
 
 const AddNote = () => {
@@ -29,8 +30,13 @@ const AddNote = () => {
 
     }
     return (
-            <div onClick={handleClick}>
-                    <h5 className="add-note">New note</h5>
+            <div onClick={handleClick} className="add-note">
+
+                    <h5 style={{ fontFamily: "Helvetica",fontStyle: "normal",fontWeight: "bold",fontSize: "14px",lineHeight: "16px"}}>
+                        <img src={addicon} style={{paddingRight:"7px"}}/>
+
+                        New note
+                    </h5>
 
             </div>
 
